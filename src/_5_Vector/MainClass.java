@@ -1,16 +1,20 @@
 package _5_Vector;
 
+import java.util.Iterator;
+import java.util.Vector;
+
 public class MainClass 
 {
 	public static void main(String args[])
 	{
 		
+		//Vector proves to be very useful if you don't know the size of the array in advance or you just need one
+		//that can change sizes over the lifetime of a program.
+		
+		
 		//Similarity between Vector and ArrayList
-		//1> Both Vector and ArrayList use growable array data structure.
-		//2> The iterator and listIterator returned by these classes (Vector and ArrayList) are fail-fast.
-		//3> They both are ordered collection classes as they maintain the elements insertion order.
-		//4> Vector & ArrayList both allows duplicate and null values.
-		//5> They both grows and shrinks automatically when overflow and deletion happens.
+		//Vector is exactly same as ArrayList except for few things which is shown below
+		
 		
 		//Difference
 		//1) Synchronization: ArrayList is non-synchronized which means multiple threads can work on ArrayList
@@ -31,7 +35,41 @@ public class MainClass
 		
 		
 		
+		//Initial capacity of the vector is 3 and it will increment by 2
+		Vector<Integer> vector = new Vector<>(3,5);
+		System.out.println("Size of the vector " + vector.size());
+		System.out.println("Capacity of the vector " + vector.capacity());
 		
+		vector.add(1);
+		vector.add(2);
+		vector.add(1);
+		vector.add(5);
+		vector.add(5);
+		
+		System.out.println("After adding 3 Size of the vector " + vector.size());
+		System.out.println("After adding 3 Capacity of the vector " + vector.capacity());
+		
+
+		
+		vector.addElement(4);
+		
+		System.out.println("After adding 4 Size of the vector " + vector.size());
+		System.out.println("After adding 4 Capacity of the vector " + vector.capacity());
+		
+		System.out.println("Your vector " + vector);
+		
+		
+		
+		//It is synchronized
+		
+		
+		//Iterating through vector
+		System.out.println("Iterating through vector");
+		Iterator iterator = vector.iterator();
+		while(iterator.hasNext())
+		{
+			System.out.println(iterator.next());
+		}
 		
 	}
 }
