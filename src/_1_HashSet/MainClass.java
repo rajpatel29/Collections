@@ -9,6 +9,16 @@ public class MainClass
 {
 	public static void main(String args[])
 	{
+		//It is for every Iterator Object
+		
+//		A fail-fast system is nothing but immediately report any failure that
+//		is likely to lead to failure. When a problem occurs, a fail-fast system
+//		fails immediately. In Java, we can find this behavior with iterators.
+//		Incase, you have called iterator on a collection object, and another
+//		thread tries to modify the collection object, then concurrent modification
+//		exception will be thrown. This is called fail-fast.
+		
+		
 		
 		//Difference between different types of sets
 		//1) Performance and Speed: 
